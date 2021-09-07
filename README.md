@@ -2,27 +2,30 @@
 Docker Compose configuration to run a YouPHPTube site.
 
 # NO NONSENSE INSTALL GUIDE
-1. Go to https://github.com/stevenj/YouPHPTube and follow the Non Nonsense Install Guide for that.
-2. Go to https://github.com/stevenj/YouPHPTube-Encoder and follow the Non Nonsense Install Guide for that.
+1. Go to https://github.com/avdebeer/YouPHPTube and follow the Non Nonsense Install Guide for that.
+
+2. Go to https://github.com/avdebeer/YouPHPTube-Encoder and follow the Non Nonsense Install Guide for that.
+
 3. Clone this repository
-```sh
-$ git clone https://github.com/stevenj/YouPHPTube-DockerCompose.git
-```
+   git clone https://github.com/avdebeer/YouPHPTube-DockerCompose.git
+
 4. Change to the YouPHPTube-DockerCompose directory.
-5. Modify the file docker-compose.yml to suit yourself.  Or leave it as is, with some easy defaults.
-6. If you didn't modify the file, make a directory for the websites data:
-```sh
-$ sudo mkdir /srv/youphptube
-$ sudo chmod ugo+rwx /srv/youphptube
-$ sudo mkdir /srv/youphptube-encoder
-$ sudo chmod ugo+rwx /srv/youphptube-encoder
-```
+   mv YouPHPTube-DockerCompose PC
+
+6. Modify the file docker-compose.yml to suit yourself.  Or leave it as is, with some easy defaults.
+
+7. Make directories for the websites data:
+   sudo mkdir /srv/youphptube
+   sudo chmod ugo+rwx /srv/youphptube
+   sudo mkdir /srv/youphptube-encoder
+   sudo chmod ugo+rwx /srv/youphptube-encoder
+
 5. Run your new YouPHPTube site:
-```sh
-$ docker-compose up -d
-```
+   docker-compose up -d
+
 6. Run a browser and point it to <yourserver.ip>:8888
-7. Configure it.
+
+7. Configure it!
     * The database server name is not ```localhost```, it is ```mysql```
     * The encoder server name is ```youphptube-encoder```
     * Everything else is up to your preferences.
